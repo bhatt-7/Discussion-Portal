@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    padding-top: 20px;
+    background-color: peachpuff;
+}
+
+header {
+    background-color: teal;
+    top: 0px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#fav {
+    text-align: right;
+    color: yellow;
+    background-color: yellow;
+    color: rgb(51, 90, 153);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.c1 {
+    margin-left: 2.5%;
+}
+
+/* Flexbox layout for parent */
+.parent {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 2.5%;
+}
+
+.highlight {
+    background-color: yellow;
+    /* or any color you prefer */
+    font-weight: bold;
+}
+
+.left-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 1 45%;
+}
+
+.left-parent input,
+button {
+    font-size: 20px;
+}
+
+.left-parent .window {
+    font-size: 20px;
+}
+
+/* Adjust the window's dimensions */
+.window {
+    height: 65vh;
+    width: 45vw;
+    background-color: grey;
+    margin-top: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+.window::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-submit {
+    float: right;
+}
+
+.right-parent {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    flex: 1 1 45%;
+    /* Allows flexibility in size */
+}
+
+.right-parent-2 {
+    display: none;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+form input,
+textarea {
+    font-size: 20px;
+}
+
+#id1 {
+    color: blue;
+}
+
+.window .question-item {
+    max-height: 100px;
+    overflow: scroll;
+}
+
+.window .question-item .star-icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: sticky;
+    top: 0px;
+}
+
+/* Response area styling */
+.add-response {
+    display: flex;
+    max-height: 30vh;
+    flex-direction: column;
+    gap: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.add-response::-webkit-scrollbar {
+    display: none;
+}
+
+.ques-data {
+    max-height: 70px;
+    overflow: scroll;
+}
+
+.add-response input {
+    margin-bottom: 10px;
+}
+
+.comment {
+
+    overflow: scroll;
+    white-space: pre-wrap !important;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .parent {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .left-parent,
+    .right-parent {
+        flex: 1 1 100%;
+        width: 100%;
+        /* Ensure they take full width */
+        margin: 0;
+    }
+
+    .window {
+        width: 100%;
+        /* Make window full width on small screens */
+        height: auto;
+        /* Adjust height as needed */
+    }
+
+    .btn-submit {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .left-parent input,
+    .left-parent button,
+    form input,
+    form textarea {
+        font-size: 16px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .btn-submit {
+        font-size: 16px;
+        /* Smaller button text */
+    }
+}

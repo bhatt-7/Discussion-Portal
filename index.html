@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <h1 class="c1">Discussion Portal</h1>
+    </header>
+    <div class="parent">
+        <div class="left-parent">
+            <div class="menu">
+                <button onclick="showForm()">New Question Form</button>
+                <input type="search" placeholder="Search Questions" id="search">
+            </div>
+            <div>
+                <button id="fav"> Favourites</button>
+            </div>
+            <div class="window"></div>
+        </div>
+        <div class="right-parent">
+            <h1>Welcome to Discussion Portal!</h1>
+            <h5>Enter a subject and question to get started</h5>
+            <form>
+                <input type="text" id="subject" placeholder="Subject" style="margin-bottom: 10px;"><br>
+                <textarea name="" rows="5" placeholder="Question" cols="60" id=""></textarea><br>
+                <input type="button" value="Submit" onclick="submitQuestion()" class="btn-submit">
+            </form>
+        </div>
+        <div class="right-parent-2">
+            <h4>Question</h4>
+            <div>
+                <div class="ques-data"
+                    style="width: 100%; background-color: grey; padding: 5px 0px 5px 5px; margin-bottom: 10px;">
+                    <h1 class="subj">subject</h1>
+                    <p class="ques">question</p>
+                </div>
+                <button style="float: right; width: fit-content;" type="button"
+                    onclick="removeHandler()">Remove</button>
+            </div>
+            <div>
+                <div>
+                    <h1>Response</h1>
+                </div>
+
+                <div class="add-response">
+                </div>
+
+                <form action="">
+                    <H1>Add Response</H1>
+                    <input type="text" style="margin-bottom: 5px;" id="name" placeholder="Enter Name"><br>
+                    <textarea name="" id="comment" placeholder="Enter comment" rows="5" cols="60"></textarea>
+                </form> <button type="button" style="float: right; width: fit-content;"
+                    onclick="addResponse()">Submit</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="responseFixed.js"></script>
+
+</body>
+
+</html>
